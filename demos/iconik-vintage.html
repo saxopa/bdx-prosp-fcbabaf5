@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Iconik Vintage — Mobilier design XXᵉ · Bordeaux</title>
+<style>
+:root{--ink:#1d1c1a;--mustard:#d8a13a;--teal:#2f6b63;--rust:#bf5a37;--cream:#f3ece0;--card:#fff;--line:#e6ddcc;--mut:#7d756a}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font:16px/1.65 "Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--cream)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.note{background:var(--ink);color:var(--mustard);text-align:center;font-size:12px;letter-spacing:1px;padding:8px}
+header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;font-size:21px;letter-spacing:1px}
+.logo span{color:var(--mustard)}
+.menu{display:flex;gap:26px;font-size:13px;letter-spacing:.5px;color:#d8d2c7}
+.menu a:hover{color:var(--mustard)}
+.cart{background:var(--mustard);color:#1d1c1a;padding:9px 16px;border-radius:4px;font-size:13px;font-weight:700}
+.burger{display:none;font-size:22px;cursor:pointer;color:#fff}
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:66px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-40px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--mustard),transparent 70%);opacity:.5}
+.hero:after{content:"";position:absolute;left:-60px;bottom:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--teal),transparent 70%);opacity:.5}
+.hero .wrap{position:relative}
+.hero .eye{letter-spacing:4px;text-transform:uppercase;font-size:12px;color:var(--mustard);margin-bottom:18px}
+.hero h1{font-weight:900;font-size:clamp(40px,9vw,86px);line-height:.95;letter-spacing:-2px;max-width:14ch}
+.hero h1 em{font-style:normal;color:var(--mustard)}
+.hero p{margin-top:20px;max-width:44ch;color:#d6cfc4;font-size:18px}
+.btn{display:inline-block;margin-top:26px;background:var(--mustard);color:#1d1c1a;font-weight:800;padding:15px 30px;border-radius:4px;font-size:15px;transition:.2s}
+.btn:hover{background:#fff}
+section{padding:64px 0}
+.head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.head h2{font-weight:900;font-size:clamp(26px,5vw,42px);letter-spacing:-1px}
+.head .chip{background:var(--rust);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:.3s;opacity:0;transform:translateY(20px)}
+.p.in{opacity:1;transform:none}.p:hover{box-shadow:0 22px 44px -22px rgba(40,30,10,.45);transform:translateY(-4px)}
+.pi{height:200px;position:relative}
+.v1{background:linear-gradient(150deg,var(--mustard),#9c6f1f)}
+.v2{background:linear-gradient(150deg,var(--teal),#1c463f)}
+.v3{background:linear-gradient(150deg,var(--rust),#7d3320)}
+.v4{background:linear-gradient(150deg,#c9b07a,#8a6c34)}
+.v5{background:linear-gradient(150deg,#6d8a86,#33524d)}
+.v6{background:linear-gradient(150deg,#d98a5a,#94472a)}
+.pi .uniq{position:absolute;top:10px;left:10px;background:var(--ink);color:var(--mustard);font-size:11px;font-weight:700;letter-spacing:.5px;padding:5px 10px;border-radius:20px}
+.pc{padding:15px 17px;display:flex;flex-direction:column;gap:5px;flex:1}
+.pc .yr{font-size:12px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
+.pc h3{font-size:18px;font-weight:800}
+.pc .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:12px}
+.pc .price{font-weight:900;font-size:18px}
+.add{background:var(--ink);color:#fff;border:0;border-radius:4px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;transition:.2s}
+.add:hover,.add.on{background:var(--teal)}
+/* band */
+.band{background:var(--teal);color:#eef3f1;text-align:center}
+.band h2{font-weight:900;font-size:34px;letter-spacing:-1px;margin-bottom:12px}
+.band p{opacity:.92;max-width:52ch;margin:0 auto 22px;font-size:18px}
+.feats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.feat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:16px 20px;min-width:150px}
+.feat b{display:block;color:var(--mustard);font-size:20px;font-weight:900;margin-bottom:3px}
+.feat span{font-size:13px;opacity:.9}
+footer{background:var(--ink);color:#8d857a;text-align:center;padding:42px 22px;font-size:13px}
+footer .logo{margin-bottom:10px}
+@media(max-width:760px){.menu{display:none}.burger{display:block}
+.menu.open{display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--ink);padding:18px 22px;gap:16px}}
+</style>
+</head>
+<body>
+<div class="note">DÉMO — proposée par Ponti'Com pour Iconik Vintage · contact@ponticom.fr</div>
+<header><nav class="wrap">
+  <div class="logo">ICONIK<span>·</span>VINTAGE</div>
+  <div class="menu" id="menu"><a href="#shop">Pièces</a><a href="#about">Le concept</a><a href="#shop">Nouveautés</a></div>
+  <div class="cart">Panier <b id="cn">0</b></div>
+  <div class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</div>
+</nav></header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eye">Mobilier & design · 1950 — 1980</div>
+    <h1>Le design <em>vintage,</em> enfin en ligne.</h1>
+    <p>Pièces uniques chinées et restaurées — Scandinavie, Italie, France. Ce qui partait en DM Instagram se vend désormais en un clic.</p>
+    <a href="#shop" class="btn">Voir les pièces →</a>
+  </div>
+</div>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="head"><h2>Pièces disponibles</h2><span class="chip">Pièce unique = part vite</span></div>
+    <div class="grid">
+      <div class="p"><div class="pi v1"><span class="uniq">Unique</span></div><div class="pc"><span class="yr">Danemark · 1965</span><h3>Fauteuil teck & cuir</h3><div class="foot"><span class="price">740 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi v2"><span class="uniq">Unique</span></div><div class="pc"><span class="yr">Italie · 1972</span><h3>Lampe Murano orange</h3><div class="foot"><span class="price">390 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi v3"><span class="uniq">Unique</span></div><div class="pc"><span class="yr">France · 1958</span><h3>Enfilade pieds compas</h3><div class="foot"><span class="price">1 150 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi v4"><span class="uniq">Unique</span></div><div class="pc"><span class="yr">Suède · 1968</span><h3>Paire de chaises rotin</h3><div class="foot"><span class="price">480 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi v5"><span class="uniq">Unique</span></div><div class="pc"><span class="yr">Allemagne · 1974</span><h3>Table basse verre fumé</h3><div class="foot"><span class="price">560 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi v6"><span class="uniq">Unique</span></div><div class="pc"><span class="yr">USA · 1978</span><h3>Lampadaire chromé</h3><div class="foot"><span class="price">320 €</span><button class="add">Ajouter</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="about">
+  <div class="wrap">
+    <h2>Une pièce vue, une pièce vendue.</h2>
+    <p>En vintage, tout se joue sur la rapidité : la pièce unique part en quelques heures. Avec une vraie boutique en ligne, vos clients réservent avant même de passer en magasin.</p>
+    <div class="feats">
+      <div class="feat"><b>Réservation</b><span>En ligne, 24h/24</span></div>
+      <div class="feat"><b>Authentifié</b><span>Origine & époque</span></div>
+      <div class="feat"><b>Livraison</b><span>Soignée, France</span></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="logo">ICONIK·VINTAGE</div>Village Notre-Dame, rue Notre-Dame, 33000 Bordeaux · Maquette de démonstration</footer>
+<script>
+let n=0;document.querySelectorAll('.add').forEach(b=>b.onclick=()=>{n++;document.getElementById('cn').textContent=n;b.textContent='Ajouté ✓';b.classList.add('on');setTimeout(()=>{b.textContent='Ajouter';b.classList.remove('on')},1100)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.15});
+document.querySelectorAll('.p').forEach((c,i)=>{c.style.transitionDelay=(i*60)+'ms';io.observe(c)});
+</script>
+</body>
+</html>
