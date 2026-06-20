@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Bocca — Épicerie fine italienne · Bordeaux Chartrons</title>
+<style>
+:root{--ink:#23201c;--terra:#b5462f;--olive:#5e6b3a;--cream:#fbf6ec;--card:#fff;--line:#ece1cd;--gold:#c79a3c}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font:16px/1.7 "Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--cream)}
+.serif{font-family:"Georgia",serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.note{background:#23201c;color:#e0b96a;text-align:center;font-size:12px;letter-spacing:1px;padding:8px}
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,236,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:1px;display:flex;align-items:center;gap:10px}
+.logo .it{width:26px;height:18px;border-radius:3px;background:linear-gradient(90deg,#5e6b3a 0 33%,#fff 33% 66%,#b5462f 66%);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.menu{display:flex;gap:24px;font-size:13px;letter-spacing:.5px;color:#6c6457}
+.menu a:hover{color:var(--terra)}
+.cart{background:var(--terra);color:#fff;padding:9px 16px;border-radius:30px;font-size:13px}
+.cart b{color:#ffe1b0}
+.burger{display:none;font-size:22px;cursor:pointer}
+/* hero */
+.hero{position:relative;text-align:center;padding:90px 22px 76px;overflow:hidden;
+background:radial-gradient(120% 90% at 50% 0,#fff,#f4ead6 70%)}
+.hero .eye{letter-spacing:4px;text-transform:uppercase;font-size:12px;color:var(--terra);margin-bottom:18px}
+.hero h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(34px,7vw,60px);line-height:1.06}
+.hero h1 em{font-style:italic;color:var(--olive)}
+.hero p{max-width:46ch;margin:20px auto 0;color:#5f584c}
+.btn{display:inline-block;margin-top:26px;background:var(--terra);color:#fff;padding:15px 32px;border-radius:30px;letter-spacing:.5px;font-size:15px;transition:.25s}
+.btn:hover{background:#9c3a26}
+.tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.tags span{background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px 15px;font-size:13px;color:#6c6457}
+section{padding:66px 0}
+.head{text-align:center;margin-bottom:36px}
+.head .eye{letter-spacing:4px;text-transform:uppercase;font-size:12px;color:var(--olive);margin-bottom:10px}
+.head h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(26px,4.5vw,40px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:.3s;opacity:0;transform:translateY(20px)}
+.p.in{opacity:1;transform:none}.p:hover{box-shadow:0 20px 40px -22px rgba(80,40,20,.4)}
+.pi{height:170px;position:relative;display:grid;place-items:center;font-size:54px}
+.f1{background:linear-gradient(160deg,#e7c98a,#c79a3c)}
+.f2{background:linear-gradient(160deg,#e4b6a3,#b5462f)}
+.f3{background:linear-gradient(160deg,#cdd6a8,#5e6b3a)}
+.f4{background:linear-gradient(160deg,#e8d4b0,#b88a4a)}
+.f5{background:linear-gradient(160deg,#dcc7e0,#7c5a86)}
+.f6{background:linear-gradient(160deg,#e9cfc0,#a86a4a)}
+.pi .bio{position:absolute;top:10px;left:10px;background:var(--olive);color:#fff;font-size:11px;letter-spacing:.5px;padding:4px 9px;border-radius:14px}
+.pc{padding:15px 17px;display:flex;flex-direction:column;gap:5px;flex:1}
+.pc .o{font-size:12px;color:#9a8f7c;letter-spacing:.5px;text-transform:uppercase}
+.pc h3{font-family:Georgia,serif;font-size:17px;font-weight:500}
+.pc .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:12px}
+.pc .price{font-family:Georgia,serif;font-size:18px}
+.add{background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:9px 14px;font-size:13px;cursor:pointer;transition:.2s}
+.add:hover,.add.on{background:var(--terra);color:#fff;border-color:var(--terra)}
+/* band */
+.band{background:var(--olive);color:#f3f1e3;text-align:center}
+.band h2{font-family:Georgia,serif;font-weight:500;font-size:32px;margin-bottom:12px}
+.band p{opacity:.9;max-width:50ch;margin:0 auto 22px}
+.feats{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.feat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:18px 22px;min-width:160px}
+.feat b{display:block;font-family:Georgia,serif;font-size:21px;color:#ffe1b0;margin-bottom:4px}
+.feat span{font-size:13px;opacity:.9}
+footer{background:#23201c;color:#8d8474;text-align:center;padding:42px 22px;font-size:13px}
+footer .logo{justify-content:center;margin-bottom:10px;color:#f3f1e3}
+@media(max-width:760px){.menu{display:none}.burger{display:block}
+.menu.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--cream);border-bottom:1px solid var(--line);padding:18px 22px;gap:16px}}
+</style>
+</head>
+<body>
+<div class="note">DÉMO — proposée par Ponti'Com pour La Bocca · contact@ponticom.fr</div>
+<header><nav class="wrap">
+  <div class="logo serif"><span class="it"></span>La Bocca</div>
+  <div class="menu" id="menu"><a href="#shop">Boutique</a><a href="#pates">Pâtes & truffe</a><a href="#vins">Vins</a><a href="#histoire">La maison</a></div>
+  <div class="cart">Panier <b id="cn">0</b></div>
+  <div class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</div>
+</nav></header>
+
+<div class="hero">
+  <div class="eye">Épicerie fine italienne · Bordeaux Chartrons</div>
+  <h1 class="serif">L'Italie,<br><em>livrée chez vous.</em></h1>
+  <p>Le meilleur du Piémont et de toute la botte — truffe, pâtes Setaro, huiles, vins bio. Désormais commandable en ligne.</p>
+  <a href="#shop" class="btn">Commander en ligne →</a>
+  <div class="tags"><span>🫒 Produits sourcés</span><span>🍝 Artisans italiens</span><span>🚚 Livraison 48 h</span></div>
+</div>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="head"><div class="eye">Nos sélections</div><h2 class="serif">La boutique</h2></div>
+    <div class="grid">
+      <div class="p"><div class="pi f1">🧀</div><div class="pc"><span class="o">Parmigiano</span><h3 class="serif">Parmigiano Reggiano 24 mois</h3><div class="foot"><span class="price">8,90 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi f2"><span class="bio">Truffe</span>🍄</div><div class="pc"><span class="o">Piémont</span><h3 class="serif">Crème de truffe noire</h3><div class="foot"><span class="price">14,50 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi f3"><span class="bio">Bio</span>🫒</div><div class="pc"><span class="o">Pouilles</span><h3 class="serif">Huile d'olive extra vierge</h3><div class="foot"><span class="price">12,00 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi f4">🍝</div><div class="pc"><span class="o">Setaro</span><h3 class="serif">Spaghetti artisanaux 500 g</h3><div class="foot"><span class="price">5,80 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi f5">🍷</div><div class="pc"><span class="o">Barolo DOCG</span><h3 class="serif">Vin rouge du Piémont</h3><div class="foot"><span class="price">28,00 €</span><button class="add">Ajouter</button></div></div></div>
+      <div class="p"><div class="pi f6">🥓</div><div class="pc"><span class="o">Parme</span><h3 class="serif">Prosciutto di Parma 18 mois</h3><div class="foot"><span class="price">9,40 €</span><button class="add">Ajouter</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="histoire">
+  <div class="wrap">
+    <h2 class="serif">Notre vitrine devient boutique</h2>
+    <p>Vous adorez nos produits en magasin rue Notre-Dame ? Retrouvez-les désormais en ligne, avec paiement sécurisé et retrait ou livraison — l'Italie à portée de clic.</p>
+    <div class="feats">
+      <div class="feat"><b>Click & Collect</b><span>Retrait aux Chartrons</span></div>
+      <div class="feat"><b>Paniers garnis</b><span>Coffrets cadeaux</span></div>
+      <div class="feat"><b>Livraison 48 h</b><span>Partout en France</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo serif" style="color:#f3f1e3;justify-content:center"><span class="it"></span>La Bocca</div>
+  78 bis rue Notre-Dame, 33000 Bordeaux · Maquette de démonstration
+</footer>
+<script>
+let n=0;document.querySelectorAll('.add').forEach(b=>b.onclick=()=>{n++;document.getElementById('cn').textContent=n;b.textContent='Ajouté ✓';b.classList.add('on');setTimeout(()=>{b.textContent='Ajouter';b.classList.remove('on')},1100)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.15});
+document.querySelectorAll('.p').forEach((c,i)=>{c.style.transitionDelay=(i*70)+'ms';io.observe(c)});
+</script>
+</body>
+</html>

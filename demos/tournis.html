@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maison Tournis — Joaillier à Bordeaux depuis 1896</title>
+<style>
+:root{--ink:#1b1b1f;--gold:#a8843e;--gold2:#caa860;--rose:#b76e79;--cream:#faf7f2;--line:#e8e0d4}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font:16px/1.7 "Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--cream)}
+.serif{font-family:"Didot","Bodoni MT","Georgia",serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+.note{background:var(--ink);color:var(--gold2);text-align:center;font-size:12px;letter-spacing:1px;padding:8px}
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font-family:Didot,Georgia,serif;font-size:26px;letter-spacing:4px}
+.logo span{display:block;font-size:9px;letter-spacing:6px;color:var(--gold);text-align:center;margin-top:-2px}
+.menu{display:flex;gap:30px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#6a6258}
+.menu a:hover{color:var(--gold)}
+.burger{display:none;font-size:22px;cursor:pointer}
+/* hero */
+.hero{position:relative;text-align:center;padding:96px 22px 80px;overflow:hidden;
+background:radial-gradient(120% 90% at 50% 0%,#fff 0%,#f3ece0 60%,#ece2d2 100%)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.5}
+.hero:before{width:180px;height:180px;left:-40px;top:30px;background:radial-gradient(circle at 35% 35%,#fff,#caa860 70%)}
+.hero:after{width:120px;height:120px;right:-20px;bottom:10px;background:radial-gradient(circle at 35% 35%,#fff,#b76e79 75%)}
+.hero .eye{position:relative;letter-spacing:6px;text-transform:uppercase;font-size:12px;color:var(--gold);margin-bottom:22px}
+.hero h1{position:relative;font-family:Didot,Georgia,serif;font-weight:400;font-size:clamp(36px,8vw,68px);line-height:1.05}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{position:relative;max-width:44ch;margin:22px auto 0;color:#5d564c}
+.btn{display:inline-block;margin-top:30px;background:var(--ink);color:#fff;padding:16px 34px;
+letter-spacing:2px;text-transform:uppercase;font-size:12px;border:1px solid var(--ink);transition:.25s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.g{background:var(--gold);border-color:var(--gold)}.btn.g:hover{background:transparent;color:var(--gold)}
+section{padding:74px 0}
+.head{text-align:center;margin-bottom:48px}
+.head .eye{letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--gold);margin-bottom:12px}
+.head h2{font-family:Didot,Georgia,serif;font-weight:400;font-size:clamp(28px,5vw,44px)}
+.coll{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.j{background:#fff;border:1px solid var(--line);text-align:center;padding:34px 20px;transition:.3s;opacity:0;transform:translateY(20px)}
+.j.in{opacity:1;transform:none}
+.j:hover{box-shadow:0 22px 44px -22px rgba(80,60,20,.4)}
+.gem{width:92px;height:92px;margin:0 auto 18px;border-radius:50%;position:relative;
+box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),0 10px 24px -12px rgba(0,0,0,.3)}
+.g1{background:radial-gradient(circle at 35% 30%,#fff,#caa860 65%,#8a6a2e)}
+.g2{background:radial-gradient(circle at 35% 30%,#fff,#cdd6e0 45%,#6f7d8c)}
+.g3{background:radial-gradient(circle at 35% 30%,#fff,#e3a6ae 50%,#9c4f5b)}
+.g4{background:radial-gradient(circle at 35% 30%,#fff,#bfe3cf 45%,#3f8a63)}
+.j h3{font-family:Didot,Georgia,serif;font-size:21px;font-weight:400;margin-bottom:6px}
+.j p{font-size:13px;color:#8a8175;letter-spacing:.5px}
+.j .pr{margin-top:14px;color:var(--gold);font-size:14px;letter-spacing:1px}
+/* heritage */
+.her{background:var(--ink);color:#efe9dd}
+.her .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+.her h2{font-family:Didot,Georgia,serif;font-weight:400;font-size:38px;margin-bottom:18px}
+.her h2 em{color:var(--gold2);font-style:italic}
+.her p{opacity:.82;margin-bottom:14px}
+.her .y{display:flex;gap:26px;margin-top:24px}
+.her .y b{font-family:Didot,Georgia,serif;color:var(--gold2);font-size:30px;display:block}
+.her .y span{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;opacity:.7}
+.her .frame{aspect-ratio:1;background:
+radial-gradient(60% 60% at 50% 40%,rgba(202,168,96,.35),transparent 70%),#15151a;
+border:1px solid #2c2c33;display:grid;place-items:center}
+.her .frame:after{content:"T";font-family:Didot,Georgia,serif;font-size:170px;color:rgba(202,168,96,.25)}
+/* rdv */
+.rdv{text-align:center}
+.rdv h2{font-family:Didot,Georgia,serif;font-weight:400;font-size:38px;margin-bottom:10px}
+.rdv p{color:#5d564c;max-width:46ch;margin:0 auto 8px}
+footer{background:#15151a;color:#8d857a;text-align:center;padding:44px 22px;font-size:13px}
+footer .logo{justify-content:center;margin-bottom:12px}
+@media(max-width:760px){.menu{display:none}.burger{display:block}.her .wrap{grid-template-columns:1fr}
+.menu.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#faf7f2;border-bottom:1px solid var(--line);padding:18px 22px;gap:16px}}
+</style>
+</head>
+<body>
+<div class="note">DÉMO — proposée par Ponti'Com pour la Maison Tournis · contact@ponticom.fr</div>
+<header><nav class="wrap">
+  <div class="logo">TOURNIS<span>JOAILLIER · 1896</span></div>
+  <div class="menu" id="menu"><a href="#coll">Collections</a><a href="#maison">La Maison</a><a href="#rdv">Rendez-vous</a></div>
+  <div class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</div>
+</nav></header>
+
+<div class="hero">
+  <div class="eye">Joaillier · Bordeaux · Cours de l'Intendance</div>
+  <h1 class="serif">L'art du bijou,<br><em>depuis 1896.</em></h1>
+  <p>Création, réparation et transformation de vos pièces précieuses, dans la tradition d'une maison bordelaise de cinq générations.</p>
+  <div><a href="#rdv" class="btn g">Prendre rendez-vous</a></div>
+</div>
+
+<section id="coll">
+  <div class="wrap">
+    <div class="head"><div class="eye">Nos univers</div><h2 class="serif">Collections</h2></div>
+    <div class="coll">
+      <div class="j"><div class="gem g1"></div><h3 class="serif">Or & Diamants</h3><p>Bagues de fiançailles</p><div class="pr">sur mesure</div></div>
+      <div class="j"><div class="gem g2"></div><h3 class="serif">Perles fines</h3><p>Colliers & boucles</p><div class="pr">collection</div></div>
+      <div class="j"><div class="gem g3"></div><h3 class="serif">Pierres de couleur</h3><p>Rubis · saphirs</p><div class="pr">création</div></div>
+      <div class="j"><div class="gem g4"></div><h3 class="serif">Atelier</h3><p>Réparation & transformation</p><div class="pr">expertise</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="her" id="maison">
+  <div class="wrap">
+    <div>
+      <div class="eye" style="letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--gold2);margin-bottom:12px">Notre héritage</div>
+      <h2 class="serif">Cinq générations <em>d'excellence.</em></h2>
+      <p>Depuis 1896, la Maison Tournis perpétue un savoir-faire joaillier rare au cœur de Bordeaux. Chaque pièce est pensée, dessinée et façonnée dans notre atelier.</p>
+      <p>Aujourd'hui, notre vitrine en ligne donne à ce savoir-faire l'écrin numérique qu'il mérite — élégant, rapide, et à votre image.</p>
+      <div class="y">
+        <div><b>1896</b><span>Fondation</span></div>
+        <div><b>5</b><span>Générations</span></div>
+        <div><b>∞</b><span>Pièces uniques</span></div>
+      </div>
+    </div>
+    <div class="frame"></div>
+  </div>
+</section>
+
+<section class="rdv" id="rdv">
+  <div class="wrap">
+    <div class="eye" style="letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--gold);margin-bottom:12px">Sur rendez-vous</div>
+    <h2 class="serif">Rencontrons-nous en boutique</h2>
+    <p>Un projet de création, une pierre à sertir, un bijou de famille à transformer ?</p>
+    <p style="margin-bottom:26px">29 Cours de l'Intendance, 33000 Bordeaux — du mardi au samedi.</p>
+    <a href="#" class="btn" onclick="this.textContent='Demande envoyée ✓';return false;">Réserver un créneau</a>
+  </div>
+</section>
+
+<footer>
+  <div class="logo" style="color:#efe9dd">TOURNIS<span>JOAILLIER · 1896</span></div>
+  29 Cours de l'Intendance, 33000 Bordeaux · Maquette de démonstration
+</footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.2});
+document.querySelectorAll('.j').forEach((c,i)=>{c.style.transitionDelay=(i*80)+'ms';io.observe(c)});
+</script>
+</body>
+</html>
